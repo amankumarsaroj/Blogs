@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            
+        
+        }
+        
+        .container{
+            max-width: 80vw;
+            padding: 2rem 1rem;
+            margin: 0 auto;
+            
+            /* background-color: aqua; */
+        }
+        .headercontainer{
+            margin-bottom: 2.8rem;
+        }
+        .header_title{
+            margin-bottom:1rem ;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            font-weight: 700rem;
+            text-align: center;
+        }
+        .header_desk{
+            max-width: 650px;
+            text-align: center;
+            color: rgb(104, 101, 101);
+            margin: 0 auto;
+        }
+        .maincontainer{
+            display: grid;
+            gap:1.5rem ;
+            grid-template-columns: repeat(4,1fr);
+        }
+       
+        
+        @media(min-width :650px){
+            .maincontainer{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media(min-width :1080px){
+            .maincontainer{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        @media(min-width :1340px){
+            .maincontainer{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+        .cardcontainer{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(97, 93, 93);
+            border-radius: 8px;
+            
+        }
+        .cardimagecontainer{
+            position: relative;
+            overflow: hidden;
+            height: 16rem;
+
+        }
+        @media(min-width){
+            .cardimagecontainer{
+                height: 16rem;
+            }
+        }
+        .card_image{
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .cardtitlecontainer{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        .cardcontainer:hover .card_image{
+            transform: scale(1.2);
+            transition-duration:200ms;
+
+        }
+        .card_title{
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            margin-bottom: 0.3rem;
+            color: rgb(59, 55, 55);
+        }
+        .cardtitle_anchor:hover .card_title{
+            color: rgb(13, 13, 205);
+
+        }
+        .card_body{
+            color: rgb(108, 98, 98);
+            font-size: 1rem;
+        }
+        .cardfootercontainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding:  1rem;
+            padding-bottom: 1.5rem ;
+        }
+        .auther{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.2rem;
+            justify-content: space-between;
+        }
+        .autheravtarcontainer{
+            height: 2.5rem;
+            width: 2rem;
+            overflow: hidden;
+            border: 1px solid rgb(154, 145, 145);
+            border-radius: 50%;
+            background-color: rgb(195, 188, 188);
+        }
+        .autherinfocontainer{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .name{
+            color: rgb(40, 40, 231);
+        }
+        .date{
+            color: rgb(162, 149, 149);
+            
+        }
+        .cardtagcontainer{
+            font-size: 0.7rem;
+            border: 1px solid rgb(78, 74, 74);
+            border-radius: 2px;
+            line-height: 1.3rem;
+            padding: 0.25rem 0.5rem;
+            color: gray;
+            align-items: flex-end;
+        }
+
+        
+
+    </style>
+</head>
+<body class="bodycontainer">
+    <div class="container">
+        <header class="headercontainer">
+            <h1 class="header_title">Blogs</h1>
+            <p class="header_desk">A typical blog combines text, digital images, and links to other blogs, web pages, and other media related to its topic.
+
+            </p>
+
+        </header>
+        <main class="maincontainer">
+            <!-- card 1 start -->
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?computer" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">Computer</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- cerd 1 end -->
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?technology" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?cartoon" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19,2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?avengers" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?galexy" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?travel" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?foreign" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <a href="#" class="cardimagecontainer">
+                    <img src="https://source.unsplash.com/random/600×400?peace" alt=" card 1 image"
+                     class="card_image" loading="lazy">
+                </a>
+                <div class="cardtitlecontainer">
+                    <a href="#" class="cardtitle_anchor">
+                        <h2 class="card_title">New Gadgest Released</h2>
+
+                    </a>
+                    <p class="card_body">
+                        Modern Gadgets. According to a dictionary definition, “A gadget is a small tool or device that has a specific useful purpose and function.
+                    </p>
+                </div>
+                <div class="cardfootercontainer">
+                    <div class="auther">
+                        <div class="autheravtarcontainer">
+                            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" alt="" loading="lazy" class="auther avtar">
+                        </div>
+                        <div class="autherinfocontainer">
+                            <span class="name">
+                                john doe
+
+                            </span>
+                            <span class="date">
+                                Sept 19, 2023
+
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="cardtagcontainer">
+                        <span>Technolodgy</span>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        </main>
+    </div>
+    
+    
+    
+</body>
+</html>
